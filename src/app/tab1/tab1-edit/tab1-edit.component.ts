@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { CourseOfWeek } from 'src/app/model/course.model';
+import { DataServiceService } from 'src/app/service/data-service.service';
+import { ToolService } from 'src/app/service/tool.service';
 
 @Component({
   selector: 'app-tab1-edit',
@@ -7,8 +10,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Tab1EditComponent implements OnInit {
 
-  constructor() { }
+  course: CourseOfWeek = this.dataService.course;
 
-  ngOnInit() {}
+  constructor(private dataService: DataServiceService,
+    private tool: ToolService) {
+  }
 
+  ngOnInit() { }
+
+  save() {
+    this.dataService.saveCourse();
+    this.tool.toast('操作完成');
+  }
 }

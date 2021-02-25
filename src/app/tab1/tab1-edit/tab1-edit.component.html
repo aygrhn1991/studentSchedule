@@ -1,12 +1,315 @@
 <ion-header>
     <ion-toolbar>
         <ion-buttons slot="start">
-            <ion-back-button></ion-back-button>
+            <ion-back-button text=""></ion-back-button>
         </ion-buttons>
         <ion-title>编辑课程表</ion-title>
     </ion-toolbar>
 </ion-header>
 
 <ion-content>
-    编辑课程表
+    <ion-list>
+        <ion-item-divider>
+            <ion-label>星期一</ion-label>
+        </ion-item-divider>
+        <ion-item>
+            <ion-label>第一节课</ion-label>
+            <ion-input [(ngModel)]="course.day1.course1.name"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>教<span class="space"></span>室</ion-label>
+            <ion-input [(ngModel)]="course.day1.course1.classroom"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>第二节课</ion-label>
+            <ion-input [(ngModel)]="course.day1.course2.name"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>教<span class="space"></span>室</ion-label>
+            <ion-input [(ngModel)]="course.day1.course2.classroom"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>第三节课</ion-label>
+            <ion-input [(ngModel)]="course.day1.course3.name"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>教<span class="space"></span>室</ion-label>
+            <ion-input [(ngModel)]="course.day1.course3.classroom"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>第四节课</ion-label>
+            <ion-input [(ngModel)]="course.day1.course4.name"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>教<span class="space"></span>室</ion-label>
+            <ion-input [(ngModel)]="course.day1.course4.classroom"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>第五节课</ion-label>
+            <ion-input [(ngModel)]="course.day1.course5.name"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>教<span class="space"></span>室</ion-label>
+            <ion-input [(ngModel)]="course.day1.course5.classroom"></ion-input>
+        </ion-item>
+        <ion-item-divider>
+            <ion-label>星期二</ion-label>
+        </ion-item-divider>
+        <ion-item>
+            <ion-label>第一节课</ion-label>
+            <ion-input [(ngModel)]="course.day2.course1.name"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>教<span class="space"></span>室</ion-label>
+            <ion-input [(ngModel)]="course.day2.course1.classroom"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>第二节课</ion-label>
+            <ion-input [(ngModel)]="course.day2.course2.name"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>教<span class="space"></span>室</ion-label>
+            <ion-input [(ngModel)]="course.day2.course2.classroom"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>第三节课</ion-label>
+            <ion-input [(ngModel)]="course.day2.course3.name"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>教<span class="space"></span>室</ion-label>
+            <ion-input [(ngModel)]="course.day2.course3.classroom"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>第四节课</ion-label>
+            <ion-input [(ngModel)]="course.day2.course4.name"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>教<span class="space"></span>室</ion-label>
+            <ion-input [(ngModel)]="course.day2.course4.classroom"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>第五节课</ion-label>
+            <ion-input [(ngModel)]="course.day2.course5.name"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>教<span class="space"></span>室</ion-label>
+            <ion-input [(ngModel)]="course.day2.course5.classroom"></ion-input>
+        </ion-item>
+        <ion-item-divider>
+            <ion-label>星期三</ion-label>
+        </ion-item-divider>
+        <ion-item>
+            <ion-label>第一节课</ion-label>
+            <ion-input [(ngModel)]="course.day3.course1.name"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>教<span class="space"></span>室</ion-label>
+            <ion-input [(ngModel)]="course.day3.course1.classroom"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>第二节课</ion-label>
+            <ion-input [(ngModel)]="course.day3.course2.name"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>教<span class="space"></span>室</ion-label>
+            <ion-input [(ngModel)]="course.day3.course2.classroom"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>第三节课</ion-label>
+            <ion-input [(ngModel)]="course.day3.course3.name"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>教<span class="space"></span>室</ion-label>
+            <ion-input [(ngModel)]="course.day3.course3.classroom"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>第四节课</ion-label>
+            <ion-input [(ngModel)]="course.day3.course4.name"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>教<span class="space"></span>室</ion-label>
+            <ion-input [(ngModel)]="course.day3.course4.classroom"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>第五节课</ion-label>
+            <ion-input [(ngModel)]="course.day3.course5.name"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>教<span class="space"></span>室</ion-label>
+            <ion-input [(ngModel)]="course.day3.course5.classroom"></ion-input>
+        </ion-item>
+        <ion-item-divider>
+            <ion-label>星期四</ion-label>
+        </ion-item-divider>
+        <ion-item>
+            <ion-label>第一节课</ion-label>
+            <ion-input [(ngModel)]="course.day4.course1.name"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>教<span class="space"></span>室</ion-label>
+            <ion-input [(ngModel)]="course.day4.course1.classroom"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>第二节课</ion-label>
+            <ion-input [(ngModel)]="course.day4.course2.name"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>教<span class="space"></span>室</ion-label>
+            <ion-input [(ngModel)]="course.day4.course2.classroom"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>第三节课</ion-label>
+            <ion-input [(ngModel)]="course.day4.course3.name"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>教<span class="space"></span>室</ion-label>
+            <ion-input [(ngModel)]="course.day4.course3.classroom"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>第四节课</ion-label>
+            <ion-input [(ngModel)]="course.day4.course4.name"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>教<span class="space"></span>室</ion-label>
+            <ion-input [(ngModel)]="course.day4.course4.classroom"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>第五节课</ion-label>
+            <ion-input [(ngModel)]="course.day4.course5.name"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>教<span class="space"></span>室</ion-label>
+            <ion-input [(ngModel)]="course.day4.course5.classroom"></ion-input>
+        </ion-item>
+        <ion-item-divider>
+            <ion-label>星期五</ion-label>
+        </ion-item-divider>
+        <ion-item>
+            <ion-label>第一节课</ion-label>
+            <ion-input [(ngModel)]="course.day5.course1.name"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>教<span class="space"></span>室</ion-label>
+            <ion-input [(ngModel)]="course.day5.course1.classroom"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>第二节课</ion-label>
+            <ion-input [(ngModel)]="course.day5.course2.name"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>教<span class="space"></span>室</ion-label>
+            <ion-input [(ngModel)]="course.day5.course2.classroom"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>第三节课</ion-label>
+            <ion-input [(ngModel)]="course.day5.course3.name"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>教<span class="space"></span>室</ion-label>
+            <ion-input [(ngModel)]="course.day5.course3.classroom"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>第四节课</ion-label>
+            <ion-input [(ngModel)]="course.day5.course4.name"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>教<span class="space"></span>室</ion-label>
+            <ion-input [(ngModel)]="course.day5.course4.classroom"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>第五节课</ion-label>
+            <ion-input [(ngModel)]="course.day5.course5.name"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>教<span class="space"></span>室</ion-label>
+            <ion-input [(ngModel)]="course.day5.course5.classroom"></ion-input>
+        </ion-item>
+        <ion-item-divider>
+            <ion-label>星期六</ion-label>
+        </ion-item-divider>
+        <ion-item>
+            <ion-label>第一节课</ion-label>
+            <ion-input [(ngModel)]="course.day6.course1.name"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>教<span class="space"></span>室</ion-label>
+            <ion-input [(ngModel)]="course.day6.course1.classroom"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>第二节课</ion-label>
+            <ion-input [(ngModel)]="course.day6.course2.name"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>教<span class="space"></span>室</ion-label>
+            <ion-input [(ngModel)]="course.day6.course2.classroom"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>第三节课</ion-label>
+            <ion-input [(ngModel)]="course.day6.course3.name"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>教<span class="space"></span>室</ion-label>
+            <ion-input [(ngModel)]="course.day6.course3.classroom"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>第四节课</ion-label>
+            <ion-input [(ngModel)]="course.day6.course4.name"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>教<span class="space"></span>室</ion-label>
+            <ion-input [(ngModel)]="course.day6.course4.classroom"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>第五节课</ion-label>
+            <ion-input [(ngModel)]="course.day6.course5.name"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>教<span class="space"></span>室</ion-label>
+            <ion-input [(ngModel)]="course.day6.course5.classroom"></ion-input>
+        </ion-item>
+        <ion-item-divider>
+            <ion-label>星期日</ion-label>
+        </ion-item-divider>
+        <ion-item>
+            <ion-label>第一节课</ion-label>
+            <ion-input [(ngModel)]="course.day7.course1.name"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>教<span class="space"></span>室</ion-label>
+            <ion-input [(ngModel)]="course.day7.course1.classroom"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>第二节课</ion-label>
+            <ion-input [(ngModel)]="course.day7.course2.name"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>教<span class="space"></span>室</ion-label>
+            <ion-input [(ngModel)]="course.day7.course2.classroom"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>第三节课</ion-label>
+            <ion-input [(ngModel)]="course.day7.course3.name"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>教<span class="space"></span>室</ion-label>
+            <ion-input [(ngModel)]="course.day7.course3.classroom"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>第四节课</ion-label>
+            <ion-input [(ngModel)]="course.day7.course4.name"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>教<span class="space"></span>室</ion-label>
+            <ion-input [(ngModel)]="course.day7.course4.classroom"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>第五节课</ion-label>
+            <ion-input [(ngModel)]="course.day7.course5.name"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label>教<span class="space"></span>室</ion-label>
+            <ion-input [(ngModel)]="course.day7.course5.classroom"></ion-input>
+        </ion-item>
+        <ion-button expand="block" (click)="save()">保存</ion-button>
+    </ion-list>
 </ion-content>
