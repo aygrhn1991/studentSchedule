@@ -45,10 +45,11 @@
             </ion-label>
         </ion-item>
         <ion-item>
-            <ion-label>第五节课</ion-label>
+            <ion-label>晚<span class="space"></span>课</ion-label>
             <ion-label>
                 {{courseOfDay.course5.name}}{{(courseOfDay.course5.classroom==null||courseOfDay.course5.classroom=='')?'':'-'}}{{courseOfDay.course5.classroom}}
             </ion-label>
         </ion-item>
+        <ion-button expand="block" fill="outline" (click)="back()">返回今天</ion-button>
     </ion-list>
 </ion-content>

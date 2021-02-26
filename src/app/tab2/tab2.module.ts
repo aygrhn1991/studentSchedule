@@ -1,21 +1,26 @@
 import { IonicModule } from '@ionic/angular';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Tab2Page } from './tab2.page';
-import { ExploreContainerComponentModule } from '../explore-container/explore-container.module';
+import { Tab2EditComponent } from './tab2-edit/tab2-edit.component';
 
-import { Tab2PageRoutingModule } from './tab2-routing.module';
+const routes: Routes = [
+  { path: '', component: Tab2Page },
+  { path: 'tab2-edit/:id', component: Tab2EditComponent }
+];
 
 @NgModule({
   imports: [
     IonicModule,
     CommonModule,
     FormsModule,
-    ExploreContainerComponentModule,
-    Tab2PageRoutingModule
+    RouterModule.forChild(routes),
   ],
-  declarations: [Tab2Page]
+  declarations: [
+    Tab2Page,
+    Tab2EditComponent
+  ]
 })
-export class Tab2PageModule {}
+export class Tab2PageModule { }

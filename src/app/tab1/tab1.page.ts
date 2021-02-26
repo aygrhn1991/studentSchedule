@@ -32,5 +32,9 @@ export class Tab1Page {
     weekdayIndex = weekdayIndex == 0 ? 7 : weekdayIndex;
     this.courseOfDay = this.course['day' + weekdayIndex];
   }
+  back() {
+    this.date = new Date();
+    this.addDay(0);
+  }
 
 }

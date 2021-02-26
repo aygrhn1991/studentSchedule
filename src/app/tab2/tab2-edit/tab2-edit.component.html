@@ -1,0 +1,25 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button text=""></ion-back-button>
+        </ion-buttons>
+        <ion-title>编辑记事</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <ion-item>
+            <ion-label>第一节课</ion-label>
+            <ion-input [(ngModel)]="course.day1.course1.name"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label class="classroom">教<span class="space"></span>室</ion-label>
+            <ion-input [(ngModel)]="course.day1.course1.classroom"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label class="classroom">教<span class="space"></span>室</ion-label>
+            <ion-input [(ngModel)]="course.day1.course1.classroom"></ion-input>
+        </ion-item>
+    </ion-list>
+</ion-content>
