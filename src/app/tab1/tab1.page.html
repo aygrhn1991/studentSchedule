@@ -10,5 +10,45 @@
 </ion-header>
 
 <ion-content>
-    课程表
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-button fill="outline" size="small" (click)="addDay(-1)">前一天</ion-button>
+        </ion-buttons>
+        <ion-title style="text-align:center;">{{dateString}} {{weekdayString}}</ion-title>
+        <ion-buttons slot="end">
+            <ion-button fill="outline" size="small" (click)="addDay(1)">后一天</ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+    <ion-list>
+        <ion-item>
+            <ion-label>第一节课</ion-label>
+            <ion-label>
+                {{courseOfDay.course1.name}}{{(courseOfDay.course1.classroom==null||courseOfDay.course1.classroom=='')?'':'-'}}{{courseOfDay.course1.classroom}}
+            </ion-label>
+        </ion-item>
+        <ion-item>
+            <ion-label>第二节课</ion-label>
+            <ion-label>
+                {{courseOfDay.course2.name}}{{(courseOfDay.course2.classroom==null||courseOfDay.course2.classroom=='')?'':'-'}}{{courseOfDay.course2.classroom}}
+            </ion-label>
+        </ion-item>
+        <ion-item>
+            <ion-label>第三节课</ion-label>
+            <ion-label>
+                {{courseOfDay.course3.name}}{{(courseOfDay.course3.classroom==null||courseOfDay.course3.classroom=='')?'':'-'}}{{courseOfDay.course3.classroom}}
+            </ion-label>
+        </ion-item>
+        <ion-item>
+            <ion-label>第四节课</ion-label>
+            <ion-label>
+                {{courseOfDay.course4.name}}{{(courseOfDay.course4.classroom==null||courseOfDay.course4.classroom=='')?'':'-'}}{{courseOfDay.course4.classroom}}
+            </ion-label>
+        </ion-item>
+        <ion-item>
+            <ion-label>第五节课</ion-label>
+            <ion-label>
+                {{courseOfDay.course5.name}}{{(courseOfDay.course5.classroom==null||courseOfDay.course5.classroom=='')?'':'-'}}{{courseOfDay.course5.classroom}}
+            </ion-label>
+        </ion-item>
+    </ion-list>
 </ion-content>

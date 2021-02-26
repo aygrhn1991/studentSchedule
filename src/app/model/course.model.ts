@@ -6,7 +6,7 @@ export class CourseModel {
     name: string;
     classroom: string;
 }
-export class CourseOfDayModel {
+export class CourseOfDay {
     constructor() {
         this.course1 = new CourseModel();
         this.course2 = new CourseModel();
@@ -22,21 +22,21 @@ export class CourseOfDayModel {
 }
 export class CourseOfWeek {
     constructor() {
-        this.day1 = new CourseOfDayModel();
-        this.day2 = new CourseOfDayModel();
-        this.day3 = new CourseOfDayModel();
-        this.day4 = new CourseOfDayModel();
-        this.day5 = new CourseOfDayModel();
-        this.day6 = new CourseOfDayModel();
-        this.day7 = new CourseOfDayModel();
+        this.day1 = new CourseOfDay();
+        this.day2 = new CourseOfDay();
+        this.day3 = new CourseOfDay();
+        this.day4 = new CourseOfDay();
+        this.day5 = new CourseOfDay();
+        this.day6 = new CourseOfDay();
+        this.day7 = new CourseOfDay();
     }
-    day1: CourseOfDayModel;
-    day2: CourseOfDayModel;
-    day3: CourseOfDayModel;
-    day4: CourseOfDayModel;
-    day5: CourseOfDayModel;
-    day6: CourseOfDayModel;
-    day7: CourseOfDayModel;
+    day1: CourseOfDay;
+    day2: CourseOfDay;
+    day3: CourseOfDay;
+    day4: CourseOfDay;
+    day5: CourseOfDay;
+    day6: CourseOfDay;
+    day7: CourseOfDay;
 }
 
 // export class CourseOfWeek {
