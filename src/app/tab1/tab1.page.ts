@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { CourseOfDay, CourseOfWeek } from '../model/course.model';
 import { DataServiceService } from '../service/data-service.service';
 import { UtilService } from '../service/util.service';
@@ -10,7 +11,6 @@ import { UtilService } from '../service/util.service';
 })
 export class Tab1Page {
 
-  course: CourseOfWeek = this.dataService.course;
   courseOfDay: CourseOfDay;
   date: Date;
   dateString: string;
@@ -30,7 +30,7 @@ export class Tab1Page {
     this.weekdayString = this.util.dateToWeekday(this.date);
     let weekdayIndex = this.date.getDay();
     weekdayIndex = weekdayIndex == 0 ? 7 : weekdayIndex;
-    this.courseOfDay = this.course['day' + weekdayIndex];
+    this.courseOfDay = this.dataService.course['day' + weekdayIndex];
   }
   back() {
     this.date = new Date();

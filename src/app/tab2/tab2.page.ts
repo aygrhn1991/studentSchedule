@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { NoteModel } from '../model/note.model';
+import { DataServiceService } from '../service/data-service.service';
 
 @Component({
   selector: 'app-tab2',
@@ -7,6 +9,8 @@ import { Component } from '@angular/core';
 })
 export class Tab2Page {
 
-  constructor() {}
+  note: Array<NoteModel> = this.dataService.note;
+
+  constructor(private dataService: DataServiceService) { }
 
 }

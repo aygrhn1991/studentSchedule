@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { CourseOfWeek } from 'src/app/model/course.model';
 import { DataServiceService } from 'src/app/service/data-service.service';
 import { ToolService } from 'src/app/service/tool.service';
@@ -12,7 +13,8 @@ export class Tab1EditComponent implements OnInit {
 
   course: CourseOfWeek = this.dataService.course;
 
-  constructor(private dataService: DataServiceService,
+  constructor(private router: Router,
+    private dataService: DataServiceService,
     private tool: ToolService) {
   }
 
@@ -21,5 +23,6 @@ export class Tab1EditComponent implements OnInit {
   save() {
     this.dataService.saveCourse();
     this.tool.toast('操作完成');
+    this.router.navigate(['/tabs/tab1']);
   }
 }

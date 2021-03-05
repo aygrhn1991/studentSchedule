@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { CourseOfWeek } from '../model/course.model';
+import { NoteModel } from '../model/note.model';
 import { UtilService } from './util.service';
 
 @Injectable({
@@ -9,7 +10,8 @@ export class DataServiceService {
 
   constructor(private util: UtilService) {
     this.getCourse();
-   }
+    this.getNote();
+  }
 
   course: CourseOfWeek;
   getCourse() {
@@ -22,5 +24,18 @@ export class DataServiceService {
   }
   saveCourse() {
     localStorage.setItem('course', JSON.stringify(this.course));
+  }
+
+  note: Array<NoteModel>;
+  getNote() {
+    let noteStroage = localStorage.getItem('note');
+    if (this.util.isNull(noteStroage)) {
+      this.note = new Array<NoteModel>();
+    } else {
+      this.note = JSON.parse(noteStroage);
+    }
+  }
+  saveNote() {
+    localStorage.setItem('note', JSON.stringify(this.note));
   }
 }

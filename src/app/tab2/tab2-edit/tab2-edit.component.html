@@ -10,16 +10,17 @@
 <ion-content>
     <ion-list>
         <ion-item>
-            <ion-label>第一节课</ion-label>
-            <ion-input [(ngModel)]="course.day1.course1.name"></ion-input>
+            <ion-label>标题</ion-label>
+            <ion-input [(ngModel)]="note.title"></ion-input>
         </ion-item>
         <ion-item>
-            <ion-label class="classroom">教<span class="space"></span>室</ion-label>
-            <ion-input [(ngModel)]="course.day1.course1.classroom"></ion-input>
+            <ion-label>时间</ion-label>
+            <ion-input [(ngModel)]="note.datetime"></ion-input>
         </ion-item>
         <ion-item>
-            <ion-label class="classroom">教<span class="space"></span>室</ion-label>
-            <ion-input [(ngModel)]="course.day1.course1.classroom"></ion-input>
+            <ion-label>内容</ion-label>
+            <ion-input [(ngModel)]="note.content"></ion-input>
         </ion-item>
+        <ion-button expand="block" (click)="save()">保存</ion-button>
     </ion-list>
 </ion-content>
