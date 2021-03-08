@@ -36,6 +36,7 @@ export class DataServiceService {
     }
   }
   saveNote() {
+    this.note.sort((a, b) => { return this.util.stringToDate(a.datetime).getTime() - this.util.stringToDate(b.datetime).getTime(); });
     localStorage.setItem('note', JSON.stringify(this.note));
   }
 }

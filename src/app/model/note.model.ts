@@ -7,6 +7,6 @@ export class NoteModel {
     }
     id: number;
     title: string;
-    datetime: Date;
+    datetime: string;
     content: string;
 }
