@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text=""></ion-back-button>
+    </ion-buttons>
+    <ion-title>编辑计划</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label>内容</ion-label>
+      <ion-textarea rows="6" [(ngModel)]="plan.content"></ion-textarea>
+    </ion-item>
+    <ion-button expand="block" (click)="save()">保存</ion-button>
+  </ion-list>
+</ion-content>

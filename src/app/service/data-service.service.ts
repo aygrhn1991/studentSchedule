@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { CourseOfWeek } from '../model/course.model';
 import { NoteModel } from '../model/note.model';
+import { PlanModel } from '../model/plan.model';
 import { UtilService } from './util.service';
 
 @Injectable({
@@ -36,7 +37,20 @@ export class DataServiceService {
     }
   }
   saveNote() {
-    this.note.sort((a, b) => { return this.util.stringToDate(a.datetime).getTime() - this.util.stringToDate(b.datetime).getTime(); });
+    this.note.sort((a, b) => { return this.util.stringToDate(a.date).getTime() - this.util.stringToDate(b.date).getTime(); });
     localStorage.setItem('note', JSON.stringify(this.note));
+  }
+
+  plan: Array<PlanModel>;
+  getPlan() {
+    let planStroage = localStorage.getItem('plan');
+    if (this.util.isNull(planStroage)) {
+      this.plan = new Array<PlanModel>();
+    } else {
+      this.plan = JSON.parse(planStroage);
+    }
+  }
+  savePlan() {
+    localStorage.setItem('plan', JSON.stringify(this.plan));
   }
 }

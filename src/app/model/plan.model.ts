@@ -1,12 +1,12 @@
-export class NoteModel {
+export class PlanModel {
     constructor() {
         this.id = new Date().getTime();
-        this.title = null;
+        this.days = 0;
         this.date = null;
         this.content = null;
     }
     id: number;
-    title: string;
+    days: number;
     date: string;
     content: string;
 }

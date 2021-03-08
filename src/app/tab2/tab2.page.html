@@ -16,7 +16,7 @@
                 <span [routerLink]="['tab2-edit',data.id]">{{data.title}}</span>
                 <ion-icon style="float:right;color:red;cursor:pointer;" name="trash-outline" (click)="delete(i)"></ion-icon>
             </ion-card-title>
-            <ion-card-subtitle [routerLink]="['tab2-edit',data.id]">{{data.datetime}}</ion-card-subtitle>
+            <ion-card-subtitle [routerLink]="['tab2-edit',data.id]">{{data.date}}</ion-card-subtitle>
         </ion-card-header>
         <ion-card-content [routerLink]="['tab2-edit',data.id]">{{data.content}}</ion-card-content>
     </ion-card>

@@ -1,18 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { NoteModel } from 'src/app/model/note.model';
+import { PlanModel } from 'src/app/model/plan.model';
 import { DataServiceService } from 'src/app/service/data-service.service';
 import { ToolService } from 'src/app/service/tool.service';
 import { UtilService } from 'src/app/service/util.service';
 
 @Component({
-  selector: 'app-tab2-edit',
-  templateUrl: './tab2-edit.component.html',
-  styleUrls: ['./tab2-edit.component.scss'],
+  selector: 'app-tab4-edit',
+  templateUrl: './tab4-edit.component.html',
+  styleUrls: ['./tab4-edit.component.scss'],
 })
-export class Tab2EditComponent implements OnInit {
+export class Tab4EditComponent implements OnInit {
 
-  note: NoteModel;
+  plan: PlanModel;
   id: number;
 
   constructor(private route: ActivatedRoute,
@@ -25,25 +25,24 @@ export class Tab2EditComponent implements OnInit {
   ngOnInit() {
     this.id = parseInt(this.route.snapshot.params['id']);
     if (this.id == 0) {
-      this.note = new NoteModel();
-      this.note.date = this.util.dateToYYYYMMDD(new Date());
+      this.plan = new PlanModel();
     } else {
-      this.dataService.note.forEach(x => {
+      this.dataService.plan.forEach(x => {
         if (x.id == this.id) {
-          this.note = x;
+          this.plan = x;
         }
       })
     }
   }
 
   save() {
-    this.note.date = this.util.dateToYYYYMMDD(new Date(this.note.date));
+    this.plan.date = this.util.dateToYYYYMMDD(new Date(this.plan.date));
     if (this.id == 0) {
-      this.dataService.note.push(this.note);
+      this.dataService.plan.push(this.plan);
     }
-    this.dataService.saveNote();
+    this.dataService.savePlan();
     this.tool.toast('操作完成');
-    this.router.navigate(['/tabs/tab2']);
+    this.router.navigate(['/tabs/tab4']);
   }
 
 }
