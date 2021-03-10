@@ -12,6 +12,7 @@ export class DataServiceService {
   constructor(private util: UtilService) {
     this.getCourse();
     this.getNote();
+    this.getPlan();
   }
 
   course: CourseOfWeek;

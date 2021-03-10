@@ -1,12 +1,14 @@
 export class PlanModel {
     constructor() {
         this.id = new Date().getTime();
-        this.days = 0;
+        this.currentDays = 0;
+        this.totalDays = 0;
         this.date = null;
         this.content = null;
     }
     id: number;
-    days: number;
+    currentDays: number;
+    totalDays: number;
     date: string;
     content: string;
 }
