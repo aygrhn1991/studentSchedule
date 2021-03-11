@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { AlertController } from '@ionic/angular';
-import { NoteModel } from '../model/note.model';
+import { ScheduleModel } from '../model/schedule.model';
 import { DataServiceService } from '../service/data-service.service';
 
 @Component({
@@ -10,7 +10,7 @@ import { DataServiceService } from '../service/data-service.service';
 })
 export class Tab5Page {
 
-  note: Array<NoteModel> = this.dataService.note;
+  schedule: Array<ScheduleModel> = this.dataService.schedule;
 
   constructor(private dataService: DataServiceService,
     public alertController: AlertController) { }
@@ -25,8 +25,8 @@ export class Tab5Page {
       {
         text: 'Okay',
         handler: () => {
-          this.dataService.note.splice(index, 1);
-          this.dataService.saveNote();
+          this.dataService.schedule.splice(index, 1);
+          this.dataService.saveSchedule();
         }
       }]
     });
