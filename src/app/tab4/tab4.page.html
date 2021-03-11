@@ -13,13 +13,16 @@
     <ion-card *ngFor="let data of plan;let i=index">
         <ion-card-header>
             <ion-card-title>
-                <span [routerLink]="['tab4-edit',data.id]">{{data.title}}</span>
-                <ion-icon style="float:right;color:red;cursor:pointer;" name="trash-outline" (click)="delete(i)"></ion-icon>
+                <span [routerLink]="['tab4-edit',data.id]">连续打卡{{data.serialDays}}天</span>
+                <ion-icon style="float:right;color:red;cursor:pointer;" name="trash-outline" (click)="delete(i)">
+                </ion-icon>
             </ion-card-title>
-            <ion-card-subtitle [routerLink]="['tab4-edit',data.id]">{{data.date}}</ion-card-subtitle>
+            <ion-card-subtitle [routerLink]="['tab4-edit',data.id]">累计打卡{{data.totalDays}}天</ion-card-subtitle>
         </ion-card-header>
-        <ion-card-content [routerLink]="['tab4-edit',data.id]">{{data.content}}
-            <ion-button expand="block" fill="outline" slot="end">View</ion-button>
+        <ion-card-content>
+            {{data.content}}
+            <ion-button expand="block" fill="outline" *ngIf="data.hasClock" color="success">已打卡</ion-button>
+            <ion-button expand="block" fill="outline" *ngIf="!data.hasClock" (click)="clock(data)">每日打卡</ion-button>
         </ion-card-content>
     </ion-card>
 </ion-content>

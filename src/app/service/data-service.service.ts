@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { CourseOfWeek } from '../model/course.model';
 import { NoteModel } from '../model/note.model';
 import { PlanModel } from '../model/plan.model';
+import { ScheduleModel } from '../model/schedule.model';
 import { UtilService } from './util.service';
 
 @Injectable({
@@ -13,6 +14,7 @@ export class DataServiceService {
     this.getCourse();
     this.getNote();
     this.getPlan();
+    this.getSchedule();
   }
 
   course: CourseOfWeek;
@@ -38,7 +40,6 @@ export class DataServiceService {
     }
   }
   saveNote() {
-    this.note.sort((a, b) => { return this.util.stringToDate(a.date).getTime() - this.util.stringToDate(b.date).getTime(); });
     localStorage.setItem('note', JSON.stringify(this.note));
   }
 
@@ -53,5 +54,19 @@ export class DataServiceService {
   }
   savePlan() {
     localStorage.setItem('plan', JSON.stringify(this.plan));
+  }
+
+  schedule: Array<ScheduleModel>;
+  getSchedule() {
+    let scheduleStroage = localStorage.getItem('schedule');
+    if (this.util.isNull(scheduleStroage)) {
+      this.schedule = new Array<ScheduleModel>();
+    } else {
+      this.schedule = JSON.parse(scheduleStroage);
+    }
+  }
+  saveSchedule() {
+    this.schedule.sort((a, b) => { return this.util.stringToDate(a.date).getTime() - this.util.stringToDate(b.date).getTime(); });
+    localStorage.setItem('schedule', JSON.stringify(this.schedule));
   }
 }

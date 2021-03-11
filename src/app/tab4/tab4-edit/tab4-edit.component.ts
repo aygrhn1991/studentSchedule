@@ -36,7 +36,10 @@ export class Tab4EditComponent implements OnInit {
   }
 
   save() {
-    this.plan.date = this.util.dateToYYYYMMDD(new Date(this.plan.date));
+    if (this.util.isNull(this.plan.content)) {
+      this.tool.toast('请完善信息');
+      return;
+    }
     if (this.id == 0) {
       this.dataService.plan.push(this.plan);
     }

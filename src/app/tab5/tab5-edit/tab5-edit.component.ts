@@ -6,11 +6,11 @@ import { ToolService } from 'src/app/service/tool.service';
 import { UtilService } from 'src/app/service/util.service';
 
 @Component({
-  selector: 'app-tab2-edit',
-  templateUrl: './tab2-edit.component.html',
-  styleUrls: ['./tab2-edit.component.scss'],
+  selector: 'app-tab5-edit',
+  templateUrl: './tab5-edit.component.html',
+  styleUrls: ['./tab5-edit.component.scss'],
 })
-export class Tab2EditComponent implements OnInit {
+export class Tab5EditComponent implements OnInit {
 
   note: NoteModel;
   id: number;
