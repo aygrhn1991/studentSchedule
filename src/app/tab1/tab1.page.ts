@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
-import { CourseOfDay, CourseOfWeek } from '../model/course.model';
+import { CourseOfDay } from '../model/course.model';
 import { DataServiceService } from '../service/data-service.service';
 import { UtilService } from '../service/util.service';
 

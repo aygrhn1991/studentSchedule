@@ -2,17 +2,24 @@ export class CourseModel {
     constructor() {
         this.name = null;
         this.classroom = null;
+        this.time = null;
     }
     name: string;
     classroom: string;
+    time: string;
 }
 export class CourseOfDay {
     constructor() {
         this.course1 = new CourseModel();
+        this.course1.time = '8:00';
         this.course2 = new CourseModel();
+        this.course2.time = '10:00';
         this.course3 = new CourseModel();
+        this.course3.time = '14:00';
         this.course4 = new CourseModel();
+        this.course4.time = '16:00';
         this.course5 = new CourseModel();
+        this.course5.time = '19:00';
     }
     course1: CourseModel;
     course2: CourseModel;
