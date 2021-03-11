@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { AlertController } from '@ionic/angular';
 import { NoteModel } from '../model/note.model';
 import { DataServiceService } from '../service/data-service.service';

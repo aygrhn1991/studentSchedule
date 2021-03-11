@@ -24,7 +24,6 @@ export class Tab4Page implements OnInit {
       if (!this.util.isNull(x.date)) {
         let now = this.util.getDayStart(new Date()).getTime();
         let last = this.util.getDayStart(this.util.stringToDate(x.date)).getTime();
-        console.log((now - last) / (24 * 60 * 60 * 1000)) ;
         if (((now - last) / (24 * 60 * 60 * 1000)) > 1) {
           x.serialDays = 0;
         }

@@ -26,7 +26,6 @@ export class Tab2EditComponent implements OnInit {
     this.id = parseInt(this.route.snapshot.params['id']);
     if (this.id == 0) {
       this.note = new NoteModel();
-      this.note.date = this.util.dateToYYYYMMDDHHMM(new Date());
     } else {
       this.dataService.note.forEach(x => {
         if (x.id == this.id) {
@@ -37,11 +36,10 @@ export class Tab2EditComponent implements OnInit {
   }
 
   save() {
-    if (this.util.isNull(this.note.title) || this.util.isNull(this.note.content)) {
+    if (this.util.isNull(this.note.content)) {
       this.tool.toast('请完善信息');
       return;
     }
-    this.note.date = this.util.dateToYYYYMMDDHHMM(new Date(this.note.date));
     if (this.id == 0) {
       this.dataService.note.push(this.note);
     }

@@ -18,6 +18,9 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes),
   ],
-  declarations: [Tab5Page]
+  declarations: [
+    Tab5Page,
+    Tab5EditComponent
+  ]
 })
-export class Tab5PageModule {}
+export class Tab5PageModule { }

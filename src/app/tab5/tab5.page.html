@@ -1,23 +1,24 @@
 <ion-header>
     <ion-toolbar>
         <ion-buttons slot="end">
-            <ion-button routerLink="tab2-edit/0">
+            <ion-button routerLink="tab5-edit/0">
                 <ion-icon name="add-outline"></ion-icon>
             </ion-button>
         </ion-buttons>
-        <ion-title>记事本</ion-title>
+        <ion-title>日程</ion-title>
     </ion-toolbar>
 </ion-header>
 
 <ion-content>
-    <ion-card *ngFor="let data of note;let i=index">
+    <ion-card *ngFor="let data of schedule;let i=index">
         <ion-card-header>
             <ion-card-title>
-                <span [routerLink]="['tab2-edit',data.id]">{{data.title}}</span>
-                <ion-icon style="float:right;color:red;cursor:pointer;" name="trash-outline" (click)="delete(i)"></ion-icon>
+                <span [routerLink]="['tab5-edit',data.id]">{{data.title}}</span>
+                <ion-icon style="float:right;color:red;cursor:pointer;" name="trash-outline" (click)="delete(i)">
+                </ion-icon>
             </ion-card-title>
-            <ion-card-subtitle [routerLink]="['tab2-edit',data.id]">{{data.date}}</ion-card-subtitle>
+            <ion-card-subtitle [routerLink]="['tab5-edit',data.id]">{{data.date}}</ion-card-subtitle>
         </ion-card-header>
-        <ion-card-content [routerLink]="['tab2-edit',data.id]">{{data.content}}</ion-card-content>
+        <ion-card-content [routerLink]="['tab5-edit',data.id]">{{data.content}}</ion-card-content>
     </ion-card>
 </ion-content>

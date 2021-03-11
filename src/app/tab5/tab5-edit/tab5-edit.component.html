@@ -3,7 +3,7 @@
       <ion-buttons slot="start">
           <ion-back-button text=""></ion-back-button>
       </ion-buttons>
-      <ion-title>编辑记事</ion-title>
+      <ion-title>编辑日程</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -11,15 +11,15 @@
   <ion-list>
       <ion-item>
           <ion-label>标题</ion-label>
-          <ion-input [(ngModel)]="note.title"></ion-input>
+          <ion-input [(ngModel)]="schedule.title"></ion-input>
       </ion-item>
       <ion-item>
           <ion-label>时间</ion-label>
-          <ion-datetime displayFormat="YYYY-MM-DD HH:mm" [(ngModel)]="note.date"></ion-datetime>
+          <ion-datetime displayFormat="YYYY-MM-DD HH:mm" [(ngModel)]="schedule.date"></ion-datetime>
       </ion-item>
       <ion-item>
           <ion-label>内容</ion-label>
-          <ion-textarea rows="6" [(ngModel)]="note.content"></ion-textarea>
+          <ion-textarea rows="6" [(ngModel)]="schedule.content"></ion-textarea>
       </ion-item>
       <ion-button expand="block" fill="outline" (click)="save()">保存</ion-button>
   </ion-list>
