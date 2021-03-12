@@ -2,11 +2,9 @@ export class CourseModel {
     constructor() {
         this.name = null;
         this.classroom = null;
-        this.time = null;
     }
     name: string;
     classroom: string;
-    time: string;
 }
 export class CourseOfDay {
     constructor() {
