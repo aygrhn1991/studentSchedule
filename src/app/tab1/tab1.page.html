@@ -23,31 +23,41 @@
         <ion-item>
             <ion-label>第一节课</ion-label>
             <ion-label>
-                {{courseOfDay.course1.name}}{{(courseOfDay.course1.classroom==null||courseOfDay.course1.classroom=='')?'':'-'}}{{courseOfDay.course1.classroom}}
+                {{courseOfDay.course1.name}}
+                {{(courseOfDay.course1.classroom==null||courseOfDay.course1.classroom=='')?'':'-'}}{{courseOfDay.course1.classroom}}
+                {{(courseOfDay.course1.time==null||courseOfDay.course1.time=='')?'':'-'}}{{courseOfDay.course1.time}}
             </ion-label>
         </ion-item>
         <ion-item>
             <ion-label>第二节课</ion-label>
             <ion-label>
-                {{courseOfDay.course2.name}}{{(courseOfDay.course2.classroom==null||courseOfDay.course2.classroom=='')?'':'-'}}{{courseOfDay.course2.classroom}}
+                {{courseOfDay.course2.name}}
+                {{(courseOfDay.course2.classroom==null||courseOfDay.course2.classroom=='')?'':'-'}}{{courseOfDay.course2.classroom}}
+                {{(courseOfDay.course2.time==null||courseOfDay.course2.time=='')?'':'-'}}{{courseOfDay.course2.time}}
             </ion-label>
         </ion-item>
         <ion-item>
             <ion-label>第三节课</ion-label>
             <ion-label>
-                {{courseOfDay.course3.name}}{{(courseOfDay.course3.classroom==null||courseOfDay.course3.classroom=='')?'':'-'}}{{courseOfDay.course3.classroom}}
+                {{courseOfDay.course3.name}}
+                {{(courseOfDay.course3.classroom==null||courseOfDay.course3.classroom=='')?'':'-'}}{{courseOfDay.course3.classroom}}
+                {{(courseOfDay.course3.time==null||courseOfDay.course3.time=='')?'':'-'}}{{courseOfDay.course3.time}}
             </ion-label>
         </ion-item>
         <ion-item>
             <ion-label>第四节课</ion-label>
             <ion-label>
-                {{courseOfDay.course4.name}}{{(courseOfDay.course4.classroom==null||courseOfDay.course4.classroom=='')?'':'-'}}{{courseOfDay.course4.classroom}}
+                {{courseOfDay.course4.name}}
+                {{(courseOfDay.course4.classroom==null||courseOfDay.course4.classroom=='')?'':'-'}}{{courseOfDay.course4.classroom}}
+                {{(courseOfDay.course4.time==null||courseOfDay.course4.time=='')?'':'-'}}{{courseOfDay.course4.time}}
             </ion-label>
         </ion-item>
         <ion-item>
             <ion-label>晚<span class="space"></span>课</ion-label>
             <ion-label>
-                {{courseOfDay.course5.name}}{{(courseOfDay.course5.classroom==null||courseOfDay.course5.classroom=='')?'':'-'}}{{courseOfDay.course5.classroom}}
+                {{courseOfDay.course5.name}}
+                {{(courseOfDay.course5.classroom==null||courseOfDay.course5.classroom=='')?'':'-'}}{{courseOfDay.course5.classroom}}
+                {{(courseOfDay.course5.time==null||courseOfDay.course5.time=='')?'':'-'}}{{courseOfDay.course5.time}}
             </ion-label>
         </ion-item>
         <ion-button expand="block" fill="outline" (click)="back()">返回今天</ion-button>
