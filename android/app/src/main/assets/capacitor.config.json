@@ -1,6 +1,6 @@
 {
   "appId": "com.cyf",
-  "appName": "studentSchedule",
+  "appName": "时间管理工具",
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "www",

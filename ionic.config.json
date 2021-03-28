@@ -1,5 +1,5 @@
 {
-  "name": "studentSchedule",
+  "name": "时间管理工具",
   "integrations": {
     "capacitor": {}
   },

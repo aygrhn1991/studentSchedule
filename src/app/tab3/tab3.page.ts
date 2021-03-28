@@ -11,13 +11,16 @@ import { UtilService } from '../service/util.service';
 })
 export class Tab3Page {
 
-  timeLine: Array<TimelineModel> = [];
+  timeLine: Array<TimelineModel>;
   courseOfDay: CourseOfDay;
 
   constructor(private dataService: DataServiceService,
     private util: UtilService) { }
 
-  ngOnInit() {
+  ngOnInit() { }
+
+  ionViewWillEnter() {
+    this.timeLine = new Array<TimelineModel>();
     let weekdayIndex = new Date().getDay();
     weekdayIndex = weekdayIndex == 0 ? 7 : weekdayIndex;
     this.courseOfDay = this.dataService.course['day' + weekdayIndex];
@@ -43,5 +46,4 @@ export class Tab3Page {
     this.timeLine.sort((a, b) => { return a.time - b.time; });
     console.log(this.timeLine);
   }
-
 }
