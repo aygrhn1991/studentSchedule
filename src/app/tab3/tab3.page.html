@@ -5,5 +5,11 @@
 </ion-header>
 
 <ion-content>
-    时间表
+    <div class="timeline">
+    <div *ngFor="let data of timeLine" class="timeline-item">
+        <span [ngStyle]="{color:data.type=='课程'?'green':'blue'}">[{{data.type}}]</span>
+        <span style="margin:0 10px;">{{data.time|date:'HH:mm'}}</span>
+        <span>{{data.content}}</span>
+    </div>
+</div>
 </ion-content>
